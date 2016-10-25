@@ -100,6 +100,9 @@ class IndexList extends Query
                 'components',
                 $result['quoteSummary']['result'][0]['components']
             )
+            && is_array(
+                $result['quoteSummary']['result'][0]['components']['components']
+            )
         ) {
             return true;
         }
