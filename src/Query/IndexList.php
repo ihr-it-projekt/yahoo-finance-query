@@ -66,9 +66,9 @@ class IndexList extends Query
             }
 
             // set array
-            $indexData['symbol'] = $indexSymbol;
+            $indexData['symbol']     = $indexSymbol;
             $indexData['components'] = $index;
-            $data[] = $indexData;
+            $data[]                  = $indexData;
         }
 
         return $data;
@@ -96,6 +96,7 @@ class IndexList extends Query
                 'components',
                 $result['quoteSummary']['result'][0]
             )
+            && is_array($result['quoteSummary']['result'][0]['components'])
             && array_key_exists(
                 'components',
                 $result['quoteSummary']['result'][0]['components']
